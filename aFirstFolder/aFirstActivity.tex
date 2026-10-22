@@ -1,143 +1,761 @@
 \documentclass{ximera}
 
-\title{A basic worksheet}
-\author{Wim Obbels \and Bart Snapp}
-\license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
+
+% Number sections 1.1, 1.2 (chapter 1 prefix)
+\renewcommand{\thesection}{1.\arabic{section}}
+
+\title{Introduction to the Practice of Statistics and Study Design}
+\author{MATH 1410}
 
 \begin{document}
 \begin{abstract}
-    A simple Ximera activity.
+Sections 1.1 and 1.2: the process of statistics, types of variables, levels of measurement, and observational studies versus designed experiments.
 \end{abstract}
 \maketitle
-\label{xim:aFirstActivity}
 
-Perhaps the most natural setting for Ximera content is that of a
-\textit{worksheet}. This is some document that may contain discussion as well
-as questions that check understanding.
+%==========================================================
+\section{Introduction to the Practice of Statistics}
+%==========================================================
 
-Ximera comes pre-equipped with many environments.  If you are ever curious about
-the source code, you can visit this source at
+\subsection*{Objectives}
+\begin{enumerate}
+  \item Define statistics and statistical thinking.
+  \item Explain the process of statistics.
+  \item Distinguish between qualitative and quantitative variables.
+  \item Distinguish between discrete and continuous variables.
+  \item Determine the level of measurement of a variable.
+\end{enumerate}
+
+\begin{definition}
+\textbf{Statistics} is the science of collecting, organizing, summarizing, and analyzing information to draw conclusions or answer questions. In addition, statistics is about providing a measure of confidence in any conclusions.
+\end{definition}
+
+The information is \textbf{data}. Data are empirical observations, measurements, or facts.
+
+\textbf{Examples:} age of students in a classroom; daily temperatures in a city; monthly sales; test scores; names of employees at a company.
+
+%----------------------------------------------------------
+\subsection*{The process of statistics}
+%----------------------------------------------------------
+
+\begin{enumerate}
+  \item[a)] \textbf{Identify a research question.} For example: Does the amount of time spent studying lead to higher test scores? Is there a significant difference in recovery time for patients who receive two different kinds of treatment? Do customers who use coupons end up spending more money at a store than customers who do not?
+  \item[b)] \textbf{Collect data.} This may involve surveys or questionnaires, or it may involve accessing already existing information in a database.
+  \item[c)] \textbf{Describe the data.} Calculate statistics like the mean, median (averages), proportion, percentage, standard deviation, etc.
+  \item[d)] \textbf{Make inferences about the population.} A sample is drawn from the population, numerical summaries are computed from the sample, and then we infer things about the population.
+\end{enumerate}
+
+\begin{definition}
+\textbf{Descriptive statistics} consist of organizing and summarizing data. Descriptive statistics describe data through numerical summaries, tables, and graphs. A \textbf{statistic} is a numerical summary based on a sample.
+
+\textbf{Inferential statistics} uses methods that take results from a sample, extends them to the population, and measures the reliability of the result.
+\end{definition}
+
+\begin{definition}
+The entire group of individuals to be studied is called the \textbf{population}. An \textbf{individual} is a person or object that is a member of the population being studied. A \textbf{sample} is a subset of the population that is being studied.
+\end{definition}
+
+\begin{definition}
+A \textbf{parameter} is a numerical summary of a population.
+\end{definition}
+
+\textbf{Parameters} (numerical summaries of a population):
+\begin{itemize}
+  \item Given a baseball player, the career batting average.
+  \item The percentage of voters who will vote for a given candidate.
+  \item The median house price in a county.
+  \item The average age of students in a classroom (the students in the classroom are the population).
+\end{itemize}
+
+\textbf{Statistic} (numerical summary of a sample): a survey finds that, out of 500 sampled voters, 300 plan to vote for candidate A, so the sample percentage is $\answer{60}\%$.
+
+\begin{example}[Statistic vs.\ parameter]
+Suppose $48.2\%$ of all students on your campus own a car. This value is a \textbf{parameter} because it is a numerical summary of a population. Suppose a sample of 100 students is obtained, and from this sample we find that $46\%$ own a car. This value is a \textbf{statistic} because it is a numerical summary of a sample.
+\end{example}
+
+\begin{problem}
+A survey of 200 randomly chosen students at a university finds that the average number of hours slept per night is 6.8. Is $6.8$ a parameter or a statistic?
+\begin{multipleChoice}
+  \choice{Parameter}
+  \choice[correct]{Statistic}
+\end{multipleChoice}
+\begin{explanation}
+The 6.8 hours comes from 200 randomly chosen students, which is a sample of the university's students, not the whole population. A numerical summary of a sample is a statistic, while a parameter would summarize every student at the university.
+\end{explanation}
+\end{problem}
+
+%----------------------------------------------------------
+\subsection*{Example: a sleep study}
+%----------------------------------------------------------
+
+In a study of high school student sleeping patterns, the association between start time of school and sleep duration was investigated. The study included 383 randomly selected adolescents from the United States. The sample had a mean age of 15.5 years, with a standard deviation of 0.6 year. It was found that students who started school at 8:30am or later exhibited a significantly longer sleep duration of 27.5 minutes. Further comparisons showed that every 1-hour delay in start time was significantly associated with 21 minutes longer sleep duration. The researchers concluded that high school start times at 8:30 am or later, compared with earlier high school start times, had significantly longer sleep duration.
+
+\emph{(Source: Nahmod, N. G., Lee, S., Master, L., Chang, A. M., Hale, L., \& Buxton, O. M. (2019). Later high school start times associated with longer actigraphic sleep duration in adolescents. Sleep, 42(2), zsy212.)}
+
+\begin{enumerate}
+  \item \textit{Identify the research objective.} To determine the association between start time of school and sleep duration.
+  \item \textit{Collect the information needed to answer the question.} The researchers studied 383 randomly selected adolescents from the United States.
+  \item \textit{Describe the data -- organize and summarize the information.} The adolescents had a mean age of 15.5 years with a standard deviation of 0.6 year. Students who started school at 8:30am or later exhibited a significantly longer sleep duration of 27.5 minutes. Every 1-hour delay in start time was significantly associated with 21 minutes longer sleep duration.
+  \item \textit{Draw conclusions from the data.} The researchers concluded that high school start times at 8:30 am or later, compared with earlier start times, had significantly longer sleep duration.
+\end{enumerate}
+
+%----------------------------------------------------------
+\subsection*{Example: Pew Research poll}
+%----------------------------------------------------------
+
+Pew Research conducted a poll and asked, ``Do you trust all or most of your neighbors?'' The following process allowed the researchers to conduct their study.
+
+\begin{enumerate}
+  \item \textit{Identify the research objective.} The researchers wanted to determine the percentage of adult Americans who trust all or most of their neighbors. Therefore, the population was adult Americans.
+  \item \textit{Collect the data needed to answer the question posed in (1).} It is unreasonable to expect to survey the more than 200 million adult Americans, so the researchers surveyed a sample of 1628 adult Americans. Of those surveyed, 847 stated they trust all or most of their neighbors.
+  \item \textit{Describe the data.} Of the 1628 individuals in the survey, $52\%$ ($=847/1628$) stated they trust all or most of their neighbors. This is a descriptive statistic because it is a summary of the sample data.
+  \item \textit{Perform inference.} Pew Research wanted to extend the results of the survey to all adult Americans. When generalizing results from a sample to a population, the results are uncertain. To account for this uncertainty, Pew reported a $2.5\%$ \emph{margin of error}. This means Pew feels fairly certain (in fact, $95\%$ certain) that the percentage of \emph{all} adult Americans who trust all or most of their neighbors is somewhere between $49.5\%$ ($=52\%-2.5\%$) and $54.5\%$ ($=52\%+2.5\%$).
+\end{enumerate}
+
+\begin{problem}
+Using the margin of error above, the interval of plausible values for the population percentage runs from $\answer{49.5}\%$ to $\answer{54.5}\%$.
+\end{problem}
+
+%----------------------------------------------------------
+\subsection*{Qualitative vs.\ quantitative variables}
+%----------------------------------------------------------
+
+\begin{definition}
+\textbf{Variables} are the characteristics of the individuals within the population.
+
+\textbf{Qualitative}, or \textbf{categorical}, variables allow for classification of individuals based on some attribute or characteristic.
+
+\textbf{Quantitative} variables provide numerical measures of individuals. The values of a quantitative variable can be added or subtracted and provide meaningful results.
+\end{definition}
+
+Names, ID numbers, zip codes, parking space letters, etc.\ are all qualitative variables.
+
+\begin{problem}
+Classify each of the following variables as qualitative or quantitative.
+
+\begin{question}
+Today's high temperature
+\begin{multipleChoice}
+  \choice{Qualitative}
+  \choice[correct]{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+Temperature is a numerical measurement, and differences between temperatures are meaningful, so it is quantitative.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Daily intake of whole grains (measured in grams per day)
+\begin{multipleChoice}
+  \choice{Qualitative}
+  \choice[correct]{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+Grams per day is a numerical measurement whose values can be added and compared meaningfully, so the variable is quantitative.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Number of vending machines at a school
+\begin{multipleChoice}
+  \choice{Qualitative}
+  \choice[correct]{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+A count of machines is a number that can be added and subtracted meaningfully, so it is quantitative.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Whether a student is prepared for class
+\begin{multipleChoice}
+  \choice[correct]{Qualitative}
+  \choice{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+The values are categories (prepared or not prepared), not numbers that can be meaningfully added or subtracted, so the variable is qualitative.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Number of days per week a student eats lunch
+\begin{multipleChoice}
+  \choice{Qualitative}
+  \choice[correct]{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+The values are counts (0 through 7) that can be added and compared meaningfully, so the variable is quantitative.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Name of a university
+\begin{multipleChoice}
+  \choice[correct]{Qualitative}
+  \choice{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+A name only labels an individual. Names cannot be added or subtracted, so the variable is qualitative.
+\end{explanation}
+\end{question}
+
+\begin{question}
+ID number
+\begin{multipleChoice}
+  \choice[correct]{Qualitative}
+  \choice{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+An ID number is written with digits but only identifies someone. Adding or subtracting ID numbers gives nothing meaningful, so the variable is qualitative.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Hourly temperatures recorded at Macalester's Ordway Field Station from 2010 to 2015
+\begin{multipleChoice}
+  \choice{Qualitative}
+  \choice[correct]{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+Temperature readings are numerical measurements, so this data is quantitative.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Photographs recording starting stances of Olympic runners in the 2024 Olympics
+\begin{multipleChoice}
+  \choice[correct]{Qualitative}
+  \choice{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+A photograph records a description of a stance rather than a numerical measurement, so the data is qualitative.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Listings of GDP, unemployment rates, and CPI of EU member nations
+\begin{multipleChoice}
+  \choice{Qualitative}
+  \choice[correct]{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+GDP, unemployment rates, and CPI are all numerical measures, so this data is quantitative.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Letters and diaries written by the 23rd Ohio Volunteer Infantry Regiment during the Civil War
+\begin{multipleChoice}
+  \choice[correct]{Qualitative}
+  \choice{Quantitative}
+\end{multipleChoice}
+\begin{explanation}
+Letters and diaries are written text, not numerical measurements, so they are qualitative data.
+\end{explanation}
+\end{question}
+\end{problem}
+
+\begin{example}[Education level]
+\emph{It depends on how it is measured.} If we measure education level by the number of years of education, it is quantitative. If we record High school, College, Graduate, it is qualitative.
+\end{example}
+
+%----------------------------------------------------------
+\subsection*{Discrete vs.\ continuous variables}
+%----------------------------------------------------------
+
+If a variable is quantitative, then it is either discrete or continuous. Discrete means ``countable.''
+
+\begin{definition}
+A \textbf{discrete variable} is a quantitative variable that has either a finite number of possible values or a countable number of possible values. The term \emph{countable} means that the values result from counting, such as $0, 1, 2, 3$, and so on. A discrete variable cannot take on every possible value between any two possible values.
+
+A \textbf{continuous variable} is a quantitative variable that has an infinite number of possible values that are not countable. A continuous variable may take on every possible value between any two values.
+\end{definition}
+
+\begin{problem}
+Determine whether each variable is discrete or continuous.
+
+\begin{question}
+The number of heads obtained after flipping a coin five times.
+\begin{multipleChoice}
+  \choice[correct]{Discrete}
+  \choice{Continuous}
+\end{multipleChoice}
+\begin{explanation}
+The number of heads comes from counting, and only whole numbers from 0 to 5 are possible (you cannot get 2.5 heads), so the variable is discrete.
+\end{explanation}
+\end{question}
+
+\begin{question}
+The number of cars that arrive at a McDonald's drive-thru between 12:00 p.m.\ and 1:00 p.m.
+\begin{multipleChoice}
+  \choice[correct]{Discrete}
+  \choice{Continuous}
+\end{multipleChoice}
+\begin{explanation}
+The number of cars results from counting, and a fraction of a car is not possible, so the variable is discrete.
+\end{explanation}
+\end{question}
+
+\begin{question}
+The distance a 2023 Tesla Model Y can travel in city driving conditions with a full charge.
+\begin{multipleChoice}
+  \choice{Discrete}
+  \choice[correct]{Continuous}
+\end{multipleChoice}
+\begin{explanation}
+Distance is measured rather than counted, and it can take any value in an interval (for example 250.1 or 250.17 miles), so the variable is continuous.
+\end{explanation}
+\end{question}
+\end{problem}
+
+\begin{problem}
+Classify each variable as qualitative or quantitative. For the quantitative variables, determine whether they are discrete or continuous.
+
+\begin{question}
+Internet provider
+\begin{multipleChoice}
+  \choice[correct]{Qualitative}
+  \choice{Quantitative, discrete}
+  \choice{Quantitative, continuous}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+Income (in dollars)
+\begin{multipleChoice}
+  \choice{Qualitative}
+  \choice[correct]{Quantitative, discrete}
+  \choice{Quantitative, continuous}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+Grade earned in Algebra (as a percentage)
+\begin{multipleChoice}
+  \choice{Qualitative}
+  \choice{Quantitative, discrete}
+  \choice[correct]{Quantitative, continuous}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+Response to the question ``Working with numbers upsets me'' (strongly agree, agree, disagree, or strongly disagree)
+\begin{multipleChoice}
+  \choice[correct]{Qualitative}
+  \choice{Quantitative, discrete}
+  \choice{Quantitative, continuous}
+\end{multipleChoice}
+\begin{explanation}
+This is a Likert scale question. Responses to things like ``on a scale of 1 to 5, how much would you recommend this movie?'' are treated the same way.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Number of students in a classroom
+\begin{multipleChoice}
+  \choice{Qualitative}
+  \choice[correct]{Quantitative, discrete}
+  \choice{Quantitative, continuous}
+\end{multipleChoice}
+\end{question}
+\end{problem}
+
+%----------------------------------------------------------
+\subsection*{Individuals, variables, and data}
+%----------------------------------------------------------
+
+Table~1 presents data from a sample of on-street parking meters within the City of Seattle. Identify the individuals, variables, and data in Table~1.
 
 \begin{center}
-    \url{https://github.com/ximeraProject/ximeraFirstSteps}
+\begin{tabular}{r l r r c r}
+\hline
+\textbf{Car} & \textbf{Payment Method} & \textbf{Amount Paid} & \textbf{Duration (min)} & \textbf{Side of Street} & \textbf{Parking Space \#}\\
+\hline
+1 & Credit Card & \$3.75 & 30 & W & 458\\
+2 & Credit Card & \$2.00 & 240 & E & 37\\
+3 & Credit Card & \$2.00 & 240 & NE & 18\\
+4 & Phone & \$1.38 & 225 & SW & 382\\
+5 & Phone & \$0.50 & 60 & W & 770\\
+6 & Credit Card & \$0.25 & 10 & S & 75\\
+7 & Credit Card & \$1.00 & 120 & E & 136\\
+8 & Credit Card & \$0.50 & 20 & S & 59\\
+9 & Phone & \$0.50 & 20 & S & 62\\
+10 & Phone & \$0.75 & 30 & S & 15\\
+11 & Phone & \$1.71 & 204 & SW & 382\\
+\hline
+\end{tabular}
+
+\emph{Source: City of Seattle Data Portal}
 \end{center}
-or by appending \verb|.tex| to the URL of this page online. 
 
+\begin{problem}
+\begin{question}
+The individuals in Table~1 are
+\begin{multipleChoice}
+  \choice[correct]{the cars}
+  \choice{the columns}
+  \choice{the payment methods}
+\end{multipleChoice}
+\end{question}
 
-\section{A basic use case}
-We use \verb|\begin{definition}| for definitions and \verb|\begin{question}| for
-questions. Since Ximera provides immediate feedback, we suggest following
-definitions like this one by a quick question. Here's an example:
+\begin{question}
+The variables in Table~1 are
+\begin{multipleChoice}
+  \choice{the cars}
+  \choice[correct]{the columns: payment method, amount paid, duration, side of street, and parking space number}
+  \choice{the rows}
+\end{multipleChoice}
+\end{question}
+\end{problem}
 
-\begin{definition}\label{def:absolute_value}
-    The \textbf{absolute value} of a real number $a$, denoted by $|a|$, is
-    \[
-        |a| = \begin{cases}
-            a  & \text{if $a \geq 0$} \\
-            -a & \text{if $a<0$.}
-        \end{cases}
-    \]
+\begin{definition}
+One way to define \textbf{data} is as the set of values of each variable for each individual. In Table~1, the data is all of the entries in the table body (everything in green in the original).
 \end{definition}
-Now students can check their understanding:
+
+%----------------------------------------------------------
+\subsection*{Level of measurement}
+%----------------------------------------------------------
+
+\begin{definition}
+A variable is at the \textbf{nominal level of measurement} if the values of the variable name, label, or categorize. In addition, the naming scheme does not allow for the values of the variable to be arranged in a ranked or specific order.
+
+A variable is at the \textbf{ordinal level of measurement} if it has the properties of the nominal level of measurement, however, the naming scheme allows for the values of the variable to be arranged in a ranked or specific order.
+\end{definition}
+
+Nominal and ordinal variables are \textbf{qualitative}.
+
+\begin{definition}
+A variable is at the \textbf{interval level of measurement} if it has the properties of the ordinal level of measurement and the differences in the values of the variable have meaning. A value of zero does not mean the absence of the quantity. Arithmetic operations such as addition and subtraction can be performed on values of the variable.
+
+A variable is at the \textbf{ratio level of measurement} if it has the properties of the interval level of measurement and the ratios of the values of the variable have meaning. A value of zero means the absence of the quantity. Arithmetic operations such as multiplication and division can be performed on the values of the variable.
+\end{definition}
+
+Interval and ratio variables are \textbf{quantitative}.
+
+\begin{problem}
+For each of the following variables, determine the level of measurement.
 
 \begin{question}
-    Evaluate the following:
-    \begin{enumerate}
-        \item $|2-5| = \answer{3}$
-        \item $|5-2| = \answer{3}$
-        \item $|5-\sqrt{2}| = \answer{5-\sqrt{2}}$
-        \item $|5-\sqrt{2}| = \answer{3.58578643763}$
-    \end{enumerate}
-    If $x > 3$ then:
-    \begin{enumerate}
-        \item $|x - 3| = \answer{x - 3}$
-        \item $|3 - x| = \answer{x - 3}$
-        \item $|\sin(x) - 3| = \answer{3 - \sin(x)}$
-    \end{enumerate}
+Internet provider
+\begin{multipleChoice}
+  \choice[correct]{Nominal}
+  \choice{Ordinal}
+  \choice{Interval}
+  \choice{Ratio}
+\end{multipleChoice}
 \end{question}
 
-To see why there are two versions of the $|5-\sqrt{2}|$ question, view the source code for this question by appending \verb|.tex| to the end of the URL.
-
-\section{A paradox}
-
-
-Here's something fun
-
-\begin{paradox}[$0=1$] Let $x=y$ and write
-\begin{align}
-        x^2    & = xy       \\
-    x^2 - y^2  & = xy - y^2 \\
-    (x-y)(x+y) & = (x-y)y   \\
-       (x+y)   & = y        \\
-         2y    & = y        \\
-          2    & =1.
-\end{align}
-Where is the mistake in the work above?
-\begin{prompt} %% The content within prompt is normally not shown in a PDF or physical handout, as not relevant.
-\[
-\text{Between line }\answer{3} \text{ and line }\answer{4}.
-\]
-\end{prompt}
-\end{paradox}
-
-
-\section{Basic exercises}
-
-After that, you might want to have some exercises.
-You will not find any inspiration in the above \hyperref[def:absolute_value]{definition of the absolute value}.
-
-\begin{exercise}
-    Let $x$ be the number of people
-    out of $100$ that LOVE Ximera.
-
-    Find the value of $x$.
-    \[
-        x = \answer{100}
-    \]
-\end{exercise}
-
-Maybe you want a problem with one or more parts,
-
-\begin{exercise}
-    Ximera is so awesome because it feels like:
-    \begin{multipleChoice}
-        \choice{Doing taxes}
-        \choice{Writing a book by hand}
-        \choice[correct]{A walk in the park with free ice cream} 
-        \choice{Solving a puzzle blindfolded}
-    \end{multipleChoice}
-    \begin{exercise}
-        Why is Ximera the best thing since the chalkboard?
-        \begin{selectAll}
-            \choice[correct]{It turns LaTeX into online materials}
-            \choice[correct]{It boosts student engagement}
-            \choice{It makes coffee and hugs you}
-            \choice[correct]{It's open-source and free}
-        \end{selectAll}
-    \end{exercise}
-\end{exercise}
-
-Finally we can include pictures using \verb|includegraphics|. Here's an example of a question with a picture.
 \begin{question}
-    Here is a picture of the Ximera Octolion:
-    \begin{center}
-        \includegraphics[width=5cm]{missionPatch.jpg}
-    \end{center}
-    What's their name?
-    \[
-    \text{Name} = \answer[format=string]{Xarlie}
-    \]
-    \begin{hint}
-        Their name begins with an ``X.''
-    \end{hint}
-    \begin{hint}
-        It ends with an ``arlie.''
-    \end{hint}
-    \begin{hint}
-        It's almost Karlie!
-    \end{hint}
+Income (in dollars)
+\begin{multipleChoice}
+  \choice{Nominal}
+  \choice{Ordinal}
+  \choice{Interval}
+  \choice[correct]{Ratio}
+\end{multipleChoice}
 \end{question}
 
-We include JPGs and PDFs in exactly the same way.
+\begin{question}
+Grade earned in Algebra (as a percentage)
+\begin{multipleChoice}
+  \choice{Nominal}
+  \choice{Ordinal}
+  \choice{Interval}
+  \choice[correct]{Ratio}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+Grade earned in Algebra (as a letter grade)
+\begin{multipleChoice}
+  \choice{Nominal}
+  \choice[correct]{Ordinal}
+  \choice{Interval}
+  \choice{Ratio}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+Response to ``Working with numbers upsets me'' (strongly agree, agree, disagree, strongly disagree)
+\begin{multipleChoice}
+  \choice{Nominal}
+  \choice[correct]{Ordinal}
+  \choice{Interval}
+  \choice{Ratio}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+Number of students in a classroom
+\begin{multipleChoice}
+  \choice{Nominal}
+  \choice{Ordinal}
+  \choice{Interval}
+  \choice[correct]{Ratio}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+Temperature of a city on a given day, measured in degrees Fahrenheit or Celsius
+\begin{multipleChoice}
+  \choice{Nominal}
+  \choice{Ordinal}
+  \choice[correct]{Interval}
+  \choice{Ratio}
+\end{multipleChoice}
+\begin{explanation}
+It depends on the scale. In degrees Fahrenheit or Celsius, temperature is interval level. In Kelvin, it is ratio level.
+\end{explanation}
+\end{question}
+
+\begin{question}
+Race
+\begin{multipleChoice}
+  \choice[correct]{Nominal}
+  \choice{Ordinal}
+  \choice{Interval}
+  \choice{Ratio}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+Gender
+\begin{multipleChoice}
+  \choice[correct]{Nominal}
+  \choice{Ordinal}
+  \choice{Interval}
+  \choice{Ratio}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+Number of days a student studied in the last week
+\begin{multipleChoice}
+  \choice{Nominal}
+  \choice{Ordinal}
+  \choice{Interval}
+  \choice[correct]{Ratio}
+\end{multipleChoice}
+\end{question}
+\end{problem}
+
+%==========================================================
+\section{Observational Studies vs.\ Designed Experiments}
+%==========================================================
+
+\subsection*{Objectives}
+\begin{enumerate}
+  \item Distinguish between an observational study and an experiment.
+  \item Explain the various types of observational studies.
+\end{enumerate}
+
+In both types of studies, researchers are interested in the relationship between two types of variables:
+\begin{enumerate}
+  \item \textbf{Explanatory variable(s)} (for example, hours studying, attendance)
+  \item \textbf{Response variable} (for example, test score)
+\end{enumerate}
+The relationship is not necessarily causal. Other variables are not necessarily of interest to the researchers. These other variables may be controlled, or the effects thereof may be mitigated through randomization.
+
+\begin{example}
+A real estate agent wants to understand the relationship between square footage of a house and selling price. She collects data about square footage and selling price for 100 houses in her city and analyzes the relationship between the two variables.
+
+\begin{problem}
+\begin{question}
+The explanatory variable is
+\begin{multipleChoice}
+  \choice[correct]{square footage}
+  \choice{selling price}
+  \choice{age of house}
+\end{multipleChoice}
+\end{question}
+\begin{question}
+The response variable is
+\begin{multipleChoice}
+  \choice{square footage}
+  \choice[correct]{selling price}
+  \choice{age of house}
+\end{multipleChoice}
+\end{question}
+\end{problem}
+
+Other variables not necessarily of interest to the agent may include proximity to schools or workplaces, noise pollution, age of house, etc., all of which ostensibly influence the response variable as well.
+\end{example}
+
+\begin{example}
+A basketball coach wants to compare the effect that three different training programs have on a player's max vertical jump. He randomly assigns 10 players to use training program A for one week, another 10 players to use training program B for one week, and another 10 players to use training program C for one week. At the end of the week he measures the max vertical jump of each player to see if there are significant differences between the groups.
+
+\begin{problem}
+\begin{question}
+Explanatory variable:
+\begin{multipleChoice}
+  \choice[correct]{Type of training program}
+  \choice{Max vertical jump height}
+  \choice{Number of players}
+\end{multipleChoice}
+\end{question}
+\begin{question}
+Response variable:
+\begin{multipleChoice}
+  \choice{Type of training program}
+  \choice[correct]{Max vertical jump height}
+  \choice{Number of players}
+\end{multipleChoice}
+\end{question}
+\end{problem}
+\end{example}
+
+\subsection*{Two studies on music and intelligence}
+
+\textbf{Study 1.} A researcher wanted to identify the effects of music on intelligence. She identified 68 kindergarteners and randomly assigned them into three groups for music instruction, focusing on the same songs. Group 1 used xylophone, group 2 used singing, and group 3 listened to music. Lessons continued for 4 months and then IQ tests of the children were administered. A trend was found with the xylophone group and instances of higher IQ. \emph{(Source: Taetle, Laurie Daniels. ``The effect of active and passive music instruction on the spatial ability of kindergarten children.'' (1999))}
+
+\textbf{Study 2.} Researchers wanted to identify long-term effects of music on intelligence. An elementary school was identified that held an enrichment program at the after school day-care. The children at the specialized music school outperformed children at a neighboring daycare in cognitive abilities. \emph{(Source: Costa-Giomi, Eugenia. ``The long-term effects of childhood music instruction on intelligence and general cognitive abilities.'' Update: Applications of Research in Music Education 33.2 (2015): 20--26)}
+
+In both studies, the goal of the research was to determine if music has some effect on intelligence. Whether or not intelligence was increased is the \textbf{response variable}. The music exposure is the \textbf{explanatory variable}. In research, we wish to determine how varying the amount of an explanatory variable affects the value of a response variable.
+
+\begin{problem}
+\begin{question}
+Study 1 is a
+\begin{multipleChoice}
+  \choice[correct]{controlled (designed) experiment}
+  \choice{observational study}
+\end{multipleChoice}
+\begin{explanation}
+The researcher randomly assigned the kindergarteners to the three groups and chose the instruction each group received. Random assignment and control of the explanatory variable make this a designed experiment.
+\end{explanation}
+\end{question}
+\begin{question}
+Study 2 is a
+\begin{multipleChoice}
+  \choice{controlled (designed) experiment}
+  \choice[correct]{observational study}
+\end{multipleChoice}
+\begin{explanation}
+The researchers compared groups that already existed (the music program and a neighboring daycare) without assigning children or controlling the instruction. Because they only observed, this is an observational study.
+\end{explanation}
+\end{question}
+\end{problem}
+
+\begin{definition}
+An \textbf{observational study} measures the value of the response variable without attempting to influence the value of either the response or explanatory variables. That is, in an observational study, the researcher observes the behavior of the individuals without trying to influence the outcome of the study.
+
+If a researcher randomly assigns the individuals in a study to groups, intentionally manipulates the value of an explanatory variable and controls other explanatory variables at fixed values, and then records the value of the response variable for each individual, the study is a \textbf{designed experiment}.
+\end{definition}
+
+\begin{example}[Do flu shots benefit seniors?]
+Researchers wanted to determine the long-term benefits of the influenza vaccine on seniors aged 65 years and older. The researchers looked at records of over 36,000 seniors for 10 years. The seniors were divided into two groups. Group 1 were seniors who chose to get a flu vaccination shot, and group 2 were seniors who chose not to get a flu vaccination shot. After observing the seniors for 10 years, it was determined that seniors who get flu shots are $27\%$ less likely to be hospitalized for pneumonia or influenza and $48\%$ less likely to die from pneumonia or influenza. \emph{(Source: Nichol et al., ``Effectiveness of Influenza Vaccine in the Community-Dwelling Elderly,'' New England Journal of Medicine 357:1373--1381, 2007)}
+
+\begin{problem}
+Is this an observational study or a designed experiment?
+\begin{multipleChoice}
+  \choice[correct]{Observational study}
+  \choice{Designed experiment}
+\end{multipleChoice}
+\begin{explanation}
+The seniors chose for themselves whether to get the shot, and the researchers only looked at existing records without assigning anyone to a group. In a designed experiment the researchers randomly assign individuals, so this is an observational study.
+\end{explanation}
+\end{problem}
+
+Based on the results of this study, would you recommend that all seniors go out and get a flu shot? Since this is an observational study, you cannot infer a cause-and-effect relationship from one observational study.
+\end{example}
+
+\subsection*{Confounding and lurking variables}
+
+\begin{definition}
+\textbf{Confounding} in a study occurs when the effects of two or more explanatory variables are not separated. Therefore, any relation that may exist between an explanatory variable and the response variable may be due to some other variable or variables not accounted for in the study.
+
+A \textbf{confounding variable} is an explanatory variable that was considered in a study whose effect cannot be distinguished from a second explanatory variable in the study.
+
+A \textbf{lurking variable} is an explanatory variable that was not considered in a study, but that affects the value of the response variable in the study. In addition, lurking variables are typically related to explanatory variables considered in the study.
+\end{definition}
+
+\textbf{Shark attacks vs.\ ice cream sales.} Plotted by month, ice cream sales and shark attacks both rise from January to a peak in August and then fall back toward December. The two track each other closely, but ice cream does not cause shark attacks.
+
+\begin{problem}
+What is a plausible lurking variable in the shark attacks and ice cream sales example?
+\begin{multipleChoice}
+  \choice{The price of ice cream}
+  \choice[correct]{Warm summer weather (more people at the beach and more people buying ice cream)}
+  \choice{The number of sharks in the ocean}
+\end{multipleChoice}
+\end{problem}
+
+\subsection*{Types of observational studies}
+
+There are three major categories of observational studies.
+
+\begin{definition}
+\textbf{Cross-sectional studies} are observational studies that collect information about individuals at a specific point in time, or over a very short period of time.
+
+\textbf{Case-control studies} are \textbf{retrospective}, meaning that they require individuals to look back in time or require the researcher to look at existing records. In case-control studies, individuals who have certain characteristics are matched with those that do not.
+
+\textbf{Cohort studies}: a cohort study first identifies a group of individuals to participate in the study (the cohort). The cohort is then observed over a long period of time. Over this time period, characteristics about the individuals are recorded. Because the data is collected over time, cohort studies are \textbf{prospective}.
+\end{definition}
+
+Note: in general, cross-sectional studies may have subjects recall past experiences. A better definition of a case-control study is the following: a case-control study compares individuals with a particular outcome (\emph{cases}) to individuals without that outcome (\emph{controls}). Researchers then determine whether past exposure or factors are more or less common in cases than in controls.
+
+\textbf{Examples of cross-sectional studies:}
+\begin{itemize}
+  \item Measure the prevalence of hypertension among adults in a city by assessing blood pressure and demographics at one point in time.
+  \item Assess the relationship between study hours and exam scores among high school students during a single semester.
+  \item Evaluate voter support for a proposed policy by surveying a representative sample of citizens on one specific date.
+\end{itemize}
+
+\textbf{Examples of case-control studies:}
+\begin{itemize}
+  \item Compare past smoking exposure between people with lung cancer (cases) and people without lung cancer (controls).
+  \item Examine prior food consumption among individuals who became ill (cases) versus those who did not (controls) after a suspected foodborne outbreak.
+  \item Compare helmet use history between cyclists who sustained head injuries (cases) and cyclists without head injuries (controls).
+\end{itemize}
+
+\textbf{Examples of cohort studies:}
+\begin{itemize}
+  \item Follow smokers and non-smokers over time to compare the incidence of lung cancer.
+  \item Use existing employment records to compare rates of asbestos-related disease in exposed vs.\ unexposed workers.
+  \item Track children born in the same year to study how early-life nutrition affects adult health outcomes.
+\end{itemize}
+
+\begin{problem}
+Determine whether each of the following studies depicts an observational study or an experiment. If the researchers conducted an observational study, determine the type of the observational study.
+
+\begin{question}
+\textbf{(a)} Researchers studied the prevalence of post-partum depression (PPD) and associated factors of new mothers. A sample of 279 women aged 19--45 were surveyed in the two months immediately after giving birth. Results showed that unemployment, education status, and C-section were most closely correlated with PPD. \emph{(Source: Alzahrani et al.\ (2022). Postpartum depression prevalence and associated factors: an observational study in Saudi Arabia. Medicina, 58(11), 1595.)}
+\begin{multipleChoice}
+  \choice{Experiment}
+  \choice[correct]{Observational: cross-sectional}
+  \choice{Observational: case-control}
+  \choice{Observational: cohort}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+\textbf{(b)} Xylitol has proven effective in preventing dental caries (cavities) when included in food or gum. A total of 75 Peruvian children were given milk with and without xylitol and were asked to evaluate the taste of each. Overall, the children preferred the milk flavored with xylitol. \emph{(Source: Castillo JL, et al (2005) Children's acceptance of milk with xylitol or sorbitol for dental caries prevention. BMC Oral Health (5)6.)}
+\begin{multipleChoice}
+  \choice[correct]{Experiment}
+  \choice{Observational: cross-sectional}
+  \choice{Observational: case-control}
+  \choice{Observational: cohort}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+\textbf{(c)} A total of 110 faculty members and 627 students from six engineering departments in the state of California participated in surveys, to identify difficulties experienced during the online instruction. Recommendations for educational reform were made based on past experiences. \emph{(Source: Asgari et al.\ (2021). An observational study of engineering online education during the COVID-19 pandemic. Plos one, 16(4), e0250041.)}
+\begin{multipleChoice}
+  \choice{Experiment}
+  \choice[correct]{Observational: cross-sectional}
+  \choice{Observational: case-control}
+  \choice{Observational: cohort}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+\textbf{(d)} Hypertension (or high blood pressure) can lead to cardiovascular problems and even death. A group of 1006 adolescents with prehypertension (moderately high blood pressure) were tracked over several years to assess which health factors lead to hypertension. \emph{(Source: Redwine KM, et al (2011) Development of hypertension in adolescents with pre-hypertension. The Journal of Pediatrics, in press.)}
+\begin{multipleChoice}
+  \choice{Experiment}
+  \choice{Observational: cross-sectional}
+  \choice{Observational: case-control}
+  \choice[correct]{Observational: cohort}
+\end{multipleChoice}
+\end{question}
+\end{problem}
 
 \end{document}
